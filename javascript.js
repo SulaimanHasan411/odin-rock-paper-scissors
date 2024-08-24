@@ -1,29 +1,41 @@
-let getComputerChoice = parseInt((Math.random() * 3) + 1);
+function getComputerChoice() {
 
+    let computerChoice = parseInt((Math.random() * 3) + 1);
 
-if (getComputerChoice === 1) {
-    getComputerChoice = "rock";
-}
-else if (getComputerChoice === 2) {
-    getComputerChoice = "paper";
-}
-else if (getComputerChoice === 3) {
-    getComputerChoice = "scissors";
+    if (computerChoice === 1) {
+        computerChoice = "rock";
+    }
+    else if (computerChoice === 2) {
+        computerChoice = "paper";
+    }
+    else if (computerChoice === 3) {
+        computerChoice = "scissors";
+    }
+
+    return computerChoice;
 }
 
-let getUserChoice = prompt("Enter rock, paper, or scissors");
+function getUserChoice() {
+    let userChoice = prompt("Enter rock, paper, or scissors");
 
-getUserChoice = getUserChoice.toLowerCase();
+    userChoice = userChoice.toLowerCase();
 
-if (getUserChoice === "rock"){
-    console.log("user choice: rock");
+    if (userChoice === "rock"){
+        console.log("user choice: rock");
+    }
+    else if (userChoice === "paper"){
+        console.log("user choice: paper");
+    }
+    else if (userChoice === "scissors"){
+        console.log("user choice: scissors");
+    }
+    else {
+        console.error("not a valid choice");
+    }
+
+    return userChoice;
 }
-else if (getUserChoice === "paper"){
-    console.log("user choice: paper");
-}
-else if (getUserChoice === "scissors"){
-    console.log("user choice: scissors");
-}
-else {
-    console.error("not a valid choice");
-}
+
+let humanScore = 0;
+let computerScore = 0;
+
