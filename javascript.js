@@ -1,3 +1,16 @@
+const contain = document.querySelector(".container");
+const rockButton = document.createElement("button");
+rockButton.textContent = "Rock";
+const paperButton = document.createElement("button");
+paperButton.textContent = "Paper";
+const scissorsButton = document.createElement("button");
+scissorsButton.textContent = "Scissors";
+contain.style.display = "flex";
+contain.style.justifyContent = "space-between";
+contain.appendChild(rockButton);
+contain.appendChild(paperButton);
+contain.appendChild(scissorsButton);
+
 function getComputerChoice() {
 
     let computerChoice = parseInt((Math.random() * 3) + 1);
@@ -73,10 +86,6 @@ function playGame() {
         console.log(`Your score: ${humanScore}\tComputer score: ${computerScore}`)
     }
 
-    playRound(getUserChoice(),getComputerChoice());
-    playRound(getUserChoice(),getComputerChoice());
-    playRound(getUserChoice(),getComputerChoice());
-    playRound(getUserChoice(),getComputerChoice());
     playRound(getUserChoice(),getComputerChoice());
 
     if (humanScore > computerScore){
